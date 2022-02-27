@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useState}from 'react'
 import ProTypes from 'prop/types'
 
 const CounterApp = ({ value }) => {
+
+   const [ counter, setCounter ] = useState(0);
+ 
+    consthandleAdd = ( => {
+        //setCounter( counter + 1);
+        setCounter ( (c) => c + 1);
+    })
+
+   }
+        
     
-    const handleadd = (e) => {
-        console.log(e)
-    }
     return (
         <>
              <h1>CounterApp</h1>
              <h2> { value } </h2>
 
-             <button onClick={ (e) { console.log(e) } }lick>+1</button>
+             <button onClick={ handleAdd } >+1</button>
 
         </>
     )
-}
+
 CounterApp.propTypes = {
     value: ProTypes.number
 
