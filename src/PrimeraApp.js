@@ -1,14 +1,14 @@
 import React  from "react";
 
 
-const PrimeraApp = () => { 
+const PrimeraApp = ( saludo  ) => { 
 
 
-    const saludo = 'Hola Mundo';
+    
 
     return (
         <>
-        <h1>{saludo }</h1>
+        <h1>{ props.saludo}</h1>
             {/*<pre> { JSON.stringify (saludo)} </pre>*/}
             <p>Mi primera PrimeraApp</p>
          </>
